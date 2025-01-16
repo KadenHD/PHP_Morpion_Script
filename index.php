@@ -85,8 +85,8 @@ function decisionIAAleatoire($tableau, $marque_ia, $marque_adversaire) {
 
 function decisionIAProfondeur1($tableau, $marque_ia, $marque_adversaire) {
     if (empty($tableau)) {
-        // retourner coin et centre en random
-        echo "tableau vide";
+        $positionsStrategiques = ['0 0', '0 2', '2 0', '2 2', '1 1'];
+        return $positionsStrategiques[array_rand($positionsStrategiques)];
     } else {
          // Vérifie si l'IA peut gagner ou empêcher une victoire imminente
         for ($ligne = 0; $ligne < 3; $ligne++) {
